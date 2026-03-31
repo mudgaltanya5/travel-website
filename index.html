@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+     <title>Travel Website</title>
+     <style>
+         .carousel-item img {
+            height: 700px;
+            object-fit: cover;
+         }
+
+         .carousel-caption{
+           top: 50%;
+         }
+
+         .card :hover{
+          background-color: black;
+          color: white;
+         }
+
+         .card .btn:hover{
+          background-color: black;
+          color: white;
+         }
+
+         .card-body .btn:hover{
+          background-color: darkblue;
+          color: white;
+         }
+
+         .overlay {
+           background-color: rgba(254, 152, 15, 0.8);
+           width: 100%;
+           height: 0;
+           position: absolute;
+           bottom: 0; 
+           left: 0;
+           transition: height 500ms ease;
+          }
+
+
+           .card:hover .overlay {
+             height: 100%;
+          }
+
+          .about .img-fluid:hover{
+            outline: darkblue;
+            border: 5px solid grey;
+          }
+
+          .about .btn:hover{
+            background-color: black;
+          }
+
+          .button .btn:hover{
+             background-color: black;
+             color: white;
+          }
+
+         .container .btn {
+             display: block;
+             margin: 0 auto;
+             width: fit-content;
+          }
+
+         .navbar-nav .nav-item:hover{
+          background-color: darkred;
+         }
+
+     </style>
+  </head>
+  <body>
+
+     <nav class="navbar navbar-expand-lg bg-dark">
+       <div class="container-fluid">
+         <a class="navbar-brand text-warning" href="index.html">
+          <i class="fa-brands fa-avianex"></i> Travel World
+         </a>
+
+         <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link text-warning" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-warning" href="destination.html">Destination</a></li>
+            <li class="nav-item"><a class="nav-link text-warning" href="package.html">Package</a></li>
+            <li class="nav-item"><a class="nav-link text-warning" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link text-warning" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link text-warning" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link text-warning" href="book.html">Book</a></li>
+            <li class="nav-item"><a class="nav-link text-warning" href="login.html">login</a></li>
+          </ul>
+        </div>
+       </div>
+     </nav>
+     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+           <div class="carousel-item active">
+             <img src="images/city.jpeg" class="d-block w-100" alt="city">
+             <div class="carousel-caption">
+               <h5 class="text-dark fw-bold">Explore the World</h5>
+               <p>Travel to amazing cities and experience unforgettable journeys with us.</p>
+               <a href="destination.html" class="btn btn-danger bg-dark">Explore Now</a>
+             </div>
+           </div>
+           <div class="carousel-item">
+             <img src="images/beach5.jpeg" class="d-block w-100" alt="beaches">
+             <div class="carousel-caption">
+               <h5 class="fw-bold text-white">Visit Beautiful Beaches</h5>
+               <p class="fs-6">Relax on stunning beaches and enjoy peaceful moments with breathtaking ocean views.</p>
+             </div>
+           </div>
+           <div class="carousel-item">
+             <img src="images/adventure.jpg" class="d-block w-100" alt="adventure">
+             <div class="carousel-caption">
+               <h5 class="fw-bold text-white">Adventure Awaits</h5>
+               <p>Experience thrilling adventures and explore exciting activities in beautiful natural landscapes.</p>
+             </div>
+           </div>
+         </div>    
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+     </div>
+     <div class="container-fluid mt-2 bg-dark text-white">
+       <h3 class="text-center mb-4">Popular Destinations</h3>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+              <div class="card h-100">
+                <img src="images/paris.jpeg" class="card-img-top">
+                <div class="card-body text-center">
+                  <h5>Paris</h5>
+                  <p>The city of light and romance.</p>
+                  <a href="destination.html" class="btn btn-warning text-dark">Explore</a>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+               <img src="images/bali.jpeg" class="card-img-top">
+               <div class="card-body text-center">
+                 <h5>Bali</h5>
+                 <p>Beautiful beaches and temples.</p>
+                 <a href="destination.html" class="btn btn-warning text-dark">Explore</a>
+               </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="images/dubai.jpeg" class="card-img-top">
+              <div class="card-body text-center">
+                <h5>Dubai</h5>
+                <p>Luxury city with modern attractions.</p>
+                <a href="destination.html" class="btn btn-warning text-dark">Explore</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+               <img src="images/goa.jpeg" class="card-img-top">
+               <div class="card-body text-center">
+                 <h5>Goa</h5>
+                 <p>Relaxing beaches and nightlife.</p>
+                 <a href="destination.html" class="btn btn-warning text-dark">Explore</a>
+               </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="images/manali.jpeg" class="card-img-top">
+              <div class="card-body text-center">
+                <h5>Manali</h5>
+                <p>Beautiful mountains and snow views.</p>
+                <a href="destination.html" class="btn btn-warning text-dark">Explore</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="images/switzerland.jpeg" class="card-img-top">
+              <div class="card-body text-center">
+                <h5>Switzerland</h5>
+                <p>Scenic landscapes and peaceful nature.</p>
+                <a href="destination.html" class="btn btn-warning text-dark">Explore</a>
+              </div>
+            </div>
+          </div>
+        </div>
+     </div>
+     <div class="container-fluid mt-2 bg-warning-subtle text-dark">
+       <h3 class="text-center mb-4 display-4">Packages</h3>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+              <div class="card h-100 bg-warning-subtle text-dark">
+                <img src="images/paris.jpeg" class="card-img-top">
+                <div class="overlay"></div>
+                <div class="card-body text-center">
+                  <div class="d-flex justify-content-between align-items-center">
+                   <span class="badge bg-success p-2">30% OFF</span>
+                   <span class="badge text-white bg-success  ms-5 p-2">$100</span>
+                  </div>
+                  <h5>Paris</h5>
+                  <p>Paris is a beautiful and romantic city known for its iconic Eiffel Tower and rich culture. It offers charming streets, world-class museums, and delicious cuisine.</p>
+                  <a href="package.html" class="btn btn-dark text-white">See Details</a>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 bg-warning-subtle text-dark">
+               <img src="images/malaysia.jpeg" class="card-img-top">
+               <div class="overlay"></div>
+               <div class="card-body text-center">
+                 <div class="d-flex justify-content-between align-items-center">
+                   <span class="badge bg-success p-2">10% OFF</span>
+                   <span class="badge text-white bg-success  ms-5 p-2">$170</span>
+                </div>   
+                 <h5>Malaysia</h5>
+                 <p class="text-start">Malaysia is a beautiful Southeast Asian country known for its stunning beaches, modern cities, and rich cultural heritage.</p>
+                 <a href="package.html" class="btn btn-dark text-white">See Details</a>
+               </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 bg-warning-subtle text-dark">
+              <img src="images/kashmir.jpeg" class="card-img-top">
+              <div class="overlay"></div>
+              <div class="card-body text-center">
+                <div class="d-flex justify-content-between align-items-center">
+                   <span class="badge bg-success p-2">20% OFF</span>
+                   <span class="badge text-white bg-success  ms-5 p-2">$120</span>
+                </div>   
+                <h5>kashmir</h5>
+                <p class="text-start">Kashmir is known for its beautiful landscapes, rich cultures and historical significance.Some popular tourist destination in the region include</p>
+                <a href="package.html" class="btn btn-dark text-white">See Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 bg-warning-subtle text-dark">
+               <img src="images/goa.jpeg" class="card-img-top">
+               <div class="overlay"></div>
+               <div class="card-body text-center">
+                 <div class="d-flex justify-content-between align-items-center">
+                   <span class="badge bg-success p-2">20% OFF</span>
+                   <span class="badge text-white bg-success  ms-5 p-2">$50</span>
+                 </div>   
+                 <h5>Goa</h5>
+                 <p class="text-start">Goa is a popular beach destination in India known for its beautiful beaches, vibrant nightlife, and relaxing atmosphere.</p>
+                 <a href="package.html" class="btn btn-dark text-white">See Details</a>
+               </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 bg-warning-subtle text-dark">
+              <img src="images/manali.jpeg" class="card-img-top">
+              <div class="overlay"></div>
+              <div class="card-body text-center">
+                <div class="d-flex justify-content-between align-items-center">
+                   <span class="badge bg-success p-2">60% OFF</span>
+                   <span class="badge text-white bg-success  ms-5 p-2">$90</span>
+                </div> 
+                <h5>Manali</h5>
+                <p class="text-start">Manali is a beautiful hill station in the himalayas,famous for its  mountains, scenic valleys, and pleasant climate.</p>
+                <a href="package.html" class="btn btn-dark text-white">See Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 bg-warning-subtle text-dark">
+              <img src="images/new york.jpeg" class="card-img-top">
+              <div class="overlay"></div>
+              <div class="card-body text-center">
+                <div class="d-flex justify-content-between align-items-center">
+                   <span class="badge bg-success p-2">50% OFF</span>
+                   <span class="badge text-white bg-success  ms-5 p-2">$200</span>
+                </div>   
+                <h5>New York</h5>
+                <p class="text-start">New York is a dynamic and exciting city known for its iconic skyline, famous attractions, and vibrant culture.</p>
+                <a href="package.html" class="btn btn-dark text-white">See Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+     </div>
+     <div class="container-fluid mt-3 bg-black p-5 border border-4 rounded-3">
+        <div class="about">
+          <h2 class="text-white text-center">About Us</h2>             
+          <div class="row align-items-center">
+            <div class="col-md-6 mb-4">
+                <img src="images/travels.jpeg" class="img-fluid rounded w-100" alt="Travel image">
+            </div>
+            <div class="col-md-6">
+                 <h2 class="text-white fs-4">Explore the World with Travel World</h2>
+                 <p class="text-white">Travel World is your trusted partner for exploring the beauty of the world. We offer a wide range of travel packages designed to create unforgettable experiences, whether its a relaxing beach holiday, an adventurous mountain trip, or a cultural city tour. We believe that travel is more than just visiting places about discovering new cultures, meeting new people, and creating lifelong memories. Our goal is to make travel easy, affordable, and enjoyable for everyone. With a focus on quality service and customer satisfaction, we ensure that every journey is smooth, comfortable, and truly memorable.</p>
+                <div class="text-center mt-3">
+                  <a href="about.html" class="btn btn-warning bg-white text-black">View More</a>
+                </div>
+            </div>
+          </div>
+        </div>
+     </div>
+     <div class="container-fluid text-center bg-black border border-3 border-white p-5">
+       <h2 class="h1 mb-4 text-white">Gallery</h2>
+       <div class="row">
+         <div class="col-md-4 mb-3">
+           <img src="images/mount abu.jpeg" class="img-fluid border border-4 border-white w-100">
+           <img src="images/shimla.jpeg" class="img-fluid border border-4 border-white mt-2 w-100">
+           <img src="images/kashmir.jpeg" class="img-fluid border border-4 border-white mt-2 w-100">
+         </div>
+         <div class="col-md-4 mb-3">
+            <img src="images/bali.jpeg" class="img-fluid border border-4 border-white w-100">
+            <img src="images/maldives.jpeg" class="img-fluid border border-4 border-white mt-2 w-100">
+            <img src="images/kerala.jpeg" class="img-fluid border border-4 border-white mt-2 w-100">
+         </div>
+         <div class="col-md-4 mb-3">
+           <img src="images/dubai.jpeg" class="img-fluid border border-4 border-white w-100">
+           <img src="images/paris.jpeg" class="img-fluid border border-4 border-white mt-2 w-100">
+           <img src="images/malaysia.jpeg" class="img-fluid border border-4 border-white mt-2 w-100">
+         </div>
+       </div>
+       <div class="d-flex justify-content-center mt-1">
+         <a href="gallery.html" class="btn btn-dark ">Go to Gallery Page</a>
+       </div>
+    </div>
+   <div class="container-fluid text-center bg-black border border-3 border-white p-5">
+      <h2 class="h1 mb-4 text-white">Services</h2>
+      <div class="row">
+        <div class="col-md-4 p-3">
+          <div class="card h-100">
+            <img src="images/Hotels (1).png" class="img-fluid" alt="Hotels">
+            <div class="card-body">
+              <h5 class="card-title">Hotels</h5>
+              <p class="card-text">Find the best hotels at affordable prices.</p>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-4 p-3">
+         <div class="card h-100">
+           <img src="images/food & drinks.png" class="img-fluid" alt="Food & Drink">
+           <div class="card-body">
+            <h5 class="card-title">Food & Drink</h5>
+            <p class="card-text">Enjoy delicious food during your travel.</p>
+           </div>
+         </div>
+      </div>
+      <div class="col-md-4 p-3">
+         <div class="card h-100">
+           <img src="images/beaches.jpeg" class="img-fluid" alt="Beaches">
+           <div class="card-body">
+             <h5 class="card-title">Beache Tours</h5>
+             <p class="card-text">Relax and enjoy peaceful beach destinations with amazing views.</p>
+           </div>
+         </div>
+      </div>
+      <div class="d-flex justify-content-center mt-1">
+         <a href="services.html" class="btn btn-dark ">view more</a>
+       </div>
+   </div>
+   <div class="container-fluid mt-3 bg-dark p-5 border border-4 rounded-3" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/adventure1.jpeg') no-repeat center; background-size: cover;">
+    
+         <h3 class="text-center mb-4 text-white">Book Your Trip</h3>
+         <form>
+            <div class="row">
+               <div class="col-md-2">
+                 <label class="form-label text-white">From</label>
+                 <select class="form-select" aria-label="Departure City">
+                    <option selected disabled>Select City</option>
+                    <option>Delhi</option>
+                    <option>Mumbai</option>
+                    <option>Jaipur</option>
+                    <option>Bangalore</option>
+                 </select>
+               </div>
+               <div class="col-md-2">
+                 <label class="form-label text-white">To</label>
+                 <select class="form-select" aria-label="Departure City">
+                    <option selected disabled>Select City</option>
+                    <option>Delhi</option>
+                    <option>Mumbai</option>
+                    <option>Jaipur</option>
+                    <option>Bangalore</option>
+                 </select>
+               </div>
+               <div class="col-md-2">
+                  <label class="form-label text-white">Date</label>
+                  <input type="date" class="form-control" required>
+               </div>
+               <div class="col-md-4">
+                  <label class="form-label text-white">Guests</label>
+                    <select class="form-select">
+                      <option selected>Select Guests</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4+</option>
+                    </select>
+               </div>
+               <div class="col-md-2 text-center mt-4">
+                  <a href="book.html" class="btn btn-primary text-white">Search</a>
+               </div>
+            </div>
+         </form>
+     </div>
+   <div class="container-fluid  text-md-start bg-dark text-warning pt-5 pb-4 mt-3">
+        <div class="row">
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+             <h4 class="text-uppercase fw-bold mb-3">
+               <i class="fa-brands fa-avianex"></i> Travel World
+             </h4>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-3">Quick Links</h6>
+            <p>
+              <a href="#" class="text-warning text-decoration-none">Home</a><br/>
+              <a href="destination.html" class="text-warning text-decoration-none">Destination</a><br/>
+              <a href="package.html" class="text-warning text-decoration-none">Packages</a><br/>
+              <a href="about.html" class="text-warning text-decoration-none">About Us</a><br/>
+              <a href="gallery.html" class="text-warning text-decoration-none">Gallery</a><br/>
+              <a href="services.html" class="text-warning text-decoration-none">Services</a><br/>
+              <a href="book.html" class="text-warning text-decoration-none">Book</a><br/>
+              <a href="login.html" class="text-warning text-decoration-none">Login</a>
+            </p>
+          </div>
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-3">Services</h6>
+            <p>
+              <a href="services.html" class="text-warning text-decoration-none">
+                <i class="fas fa-hotel me-2"></i>Hotel
+              </a>
+            </p>
+            <p>
+              <a href="services.html" class="text-warning text-decoration-none">
+                <i class="fas fa-utensils me-2"></i>Food & Drink
+              </a>
+            </p>
+            <p>
+              <a href="services.html" class="text-warning text-decoration-none">
+                <i class="fas fa-umbrella-beach me-2"></i>Beach Tour
+              </a>
+            </p>
+            <p>
+              <a href="services.html" class="text-warning text-decoration-none">
+                <i class="fas fa-user-shield me-2"></i>Safety Guide
+              </a>
+            </p>
+            <p>
+              <a href="services.html" class="text-warning text-decoration-none">
+                <i class="fas fa-hiking me-2"></i>Adventures
+              </a>
+            </p>
+            <p>
+               <a href="services.html" class="text-warning text-decoration-none">
+                 <i class="fas fa-plane-departure me-2"></i>Fastest Travel
+               </a>
+            </p>
+          </div>
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-3">Contact</h6>
+            <p><i class="fas fa-home me-2"></i> Rajasthan, India</p>
+            <p><i class="fas fa-envelope me-2"></i> mudgaltanya5@gmail.com</p>
+            <p><i class="fas fa-phone me-2"></i> +91 8955173579</p>
+
+            <div class="mt-3">
+              <a href="#" class="text-warning me-3"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="text-warning me-3"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="text-warning me-3"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-warning"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4 border-top pt-3">
+          <p class="text-muted small mb-0">
+            &copy; 2026 Travel World. All Rights Reserved.
+          </p>
+        </div>
+    </div>
+  </body>
+</html>

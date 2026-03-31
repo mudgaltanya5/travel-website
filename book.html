@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+     <title>Travel Website</title>
+     <style>
+
+         .navbar-nav .nav-item:hover{
+          background-color: darkred;
+         }
+
+         .card{
+           border-radius:15px;
+          transition:0.3s;
+        }
+
+         .card:hover{
+          transform: translateY(-5px);
+        }
+
+        .right-img{
+         border-radius:15px;
+         box-shadow:0 4px 15px rgba(0,0,0,0.3);
+         transition:0.3s;
+        }
+
+        .right-img:hover{
+           transform: scale(1.05);
+        }
+
+        .title-hover{
+           transition:0.3s;
+        }
+
+        .title-hover:hover{
+          color:red;
+          cursor:pointer;
+        }
+     </style>
+  </head>
+  <body>
+
+     <nav class="navbar navbar-expand-lg bg-dark">
+       <div class="container-fluid">
+         <a class="navbar-brand text-warning" href="index.html">
+          <i class="fa-brands fa-avianex"></i> Travel World
+         </a>
+
+         <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link text-warning" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-warning" href="destination.html">Destination</a></li>
+            <li class="nav-item"><a class="nav-link text-warning" href="package.html">Package</a></li>
+            <li class="nav-item"><a class="nav-link text-warning" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link text-warning" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link text-warning" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link text-warning" href="#">Book</a></li>
+            <li class="nav-item"><a class="nav-link text-warning" href="login.html">login</a></li>
+          </ul>
+        </div>
+       </div>
+     </nav>
+     <div class="container-fluid mt-1 p-5  border border-4 rounded-3 text-center text-white d-flex flex-column justify-content-center align-items-center" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/booking.jpeg') no-repeat center; background-size: cover; background-position: center;">
+     
+         <h2 class="mb-2">Book Your Trip</h2>
+         <p class="mb-0">Plan your perfect journey with us</p>
+     </div>
+     <div class="container-fluid p-2 mt-0 bg-#F9F8FE text-white">
+      <div class="card p-3 shadow-sm">
+       <div class="row text-center align-items-center">
+         <div class="col-md-5">
+          <span class="fw-bold">DEL</span><br/>
+          <span class="fw-bold">22:00 pm</span>
+          <h6 class="fw-bold mb-0">Thursday, Dec 8</h6>
+          <span class="fw-normal">Indira Gandhi International Airport (DEL)</span>
+         </div>
+         <div class="col-md-2">
+            <i class="fa-solid fa-plane fs-4 text-primary"></i>
+         </div>
+         <div class="col-md-5">
+          <span class="fw-bold">DPS</span><br/>
+          <span class="fw-bold">06:00 am</span>
+          <h6 class="fw-bold mb-0">Friday, Dec 9</h6>
+          <span class="fw-normal">Gusti Ngurah Rai International Airport</span>
+         </div>
+       </div>
+      </div>
+     </div>  
+     <div class="container-fluid p-2 mt-2 bg-#F9F8FE text-white">
+       <div class="container bg-#F9F8FE text-white mt-1">
+         <div class="row">
+          <div class="col-md-6 mb-2">
+            <div class="card  p-2">
+              <h3 class="text-black m-1">Personal Information</h3>
+               <form>
+                <div class="row mt-2">
+                  <div class="col-md-6">
+                    <input class="form-control form-control-lg" type="text" placeholder="First Name">
+                  </div>
+                  <div class="col-md-6">
+                    <input class="form-control form-control-lg" type="text" placeholder="Last Name">
+                  </div>
+                </div><br/>
+                <div class="row mt-2">
+                  <div class="col-md-6">
+                    <input type="email" class="form-control" id="email" placeholder="email" required />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="password" class="form-control" id="pwd" placeholder="password" required />
+                  </div>
+                </div><br/>
+                <div class="row mt-2">
+                  <div class="col-md-6">
+                     <input type="text" class="p-2 w-100" placeholder="Select a Date" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}">                  
+                  </div>
+                  <div class="col-md-6">
+                    <select class="form-select" aria-label="Default select example">
+                       <option selected>Country</option>
+                       <option value="1">India</option>
+                       <option value="2">UK</option>
+                       <option value="3">US</option>
+                    </select>
+                  </div>
+                  <div class="col-md-12 mt-2">
+                    <textarea class="form-control"  rows="3" placeholder="Enter your address"></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mt-2">
+                    <input type="text" class="form-control" id="city" placeholder="City" required />
+                  </div>
+                  <div class="col-md-6 mt-2">
+                    <input type="text" class="form-control" id="state" placeholder="State" required />
+                  </div>
+                  <div class="col-md-6 mt-2">
+                    <input type="text" class="form-control" id="Apartment" placeholder="Apartment" required />
+                  </div>
+                  <div class="col-md-6 mt-2">
+                    <input type="number" class="form-control" id="zip code" placeholder="Zip Code" required />
+                  </div>
+                </div>
+               </form>
+            </div>
+          </div>
+        
+          <div class="col-md-6 mb-2">
+              <div class="card border border-warning-subtle p-2">
+                <div class="row">
+                  <div class="col-md-12 text-center">
+                     <img src="images/bali.jpeg" class="img-fluid right-img w-100" style="max-width: 85%;" alt="bali image">
+                  </div>
+                  <div class="col-md-12">
+                    <p class="text-center text-secondary mt-2"><span><i class="fa-solid fa-location-dot"></i></span>Jl. Raya Ubud, Bali, Indonesia</p>
+                    <h4 class="h4 text-center text-black title-hover">Bali The Paradise Island</h4>
+                    <div>
+                       <span><i class="fa-solid fa-star text-warning"></i> 9.5 Superb</span>
+                    </div> 
+                    <p class="text-center text-dark mt-2 fs-0 ">Enjoy a relaxing tropical escape in Bali with beautiful beaches, temples, and nature.</p>  
+                    <hr/>
+                    <div class="d-flex justify-content-between mb-2 text-muted">
+                      <div>
+                        <span class="badge bg-dark me-1">
+                          <i class="fa-solid fa-clock"></i> 2 Days
+                        </span>
+                        <span class="badge bg-dark">
+                          <i class="fa-solid fa-moon"></i> 3 Nights
+                        </span>
+                      </div>
+                      <span class="text-danger">$1000</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+         </div>  
+       </div>
+     </div>
+     <div class="container-fluid p-2 mt-0 bg-#F9F8FE text-white">
+       <div class="container bg-#F9F8FE text-white mt-1">
+         <h2 class="text-black m-1 fs-1">Payment Information</h2>
+         <div class="row">
+          <div class="col-md-6 mb-2">
+            <div class="card  p-2">
+               <form>
+                <div class="row mt-2">
+                  <div class="col-md-6">
+                    <label for="Card Name" class="form-label">Name on Card</label>
+                    <input class="form-control form-control-lg" type="text" placeholder="Card Holder Name">
+                  </div>
+                  <div class="col-md-6 mt-2">
+                    <label for="Card Number" class="form-label">Card Number</label>
+                    <input class="form-control form-control-lg" type="number" placeholder="Card Number">
+                  </div>
+                </div><br/>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="CVV" class="form-label">CVV</label>
+                    <input class="form-control form-control-lg" type="number" min="0" max="1000" placeholder="cvv">
+                  </div>
+                  <div class="col-md-6 mt-2">
+                    <label for="Pay With" class="form-label">Pay With</label>
+                    <div>
+                        <i class="fa-solid fa-credit-card fs-1 text-dark"></i>
+                        <i class="fa-brands fa-cc-visa fs-1 text-primary"></i>
+                        <i class="fa-brands fa-google-pay fs-1"></i>
+                    </div>
+                  </div>
+                </div><br/>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="Security Code" class="form-label">Security Code</label>
+                    <input class="form-control form-control-lg" type="number" min="0" max="1000" placeholder="security Code">
+                  </div>
+                  <div class="col-md-6 mt-2">
+                    <label for="expiryDate" class="form-label">Expiry Date</label>
+                    <input type="date" id="expiryDate" class="form-control">
+                  </div>
+                </div>
+               </form>
+            </div>
+            <div class="d-flex justify-content-center mt-1">
+              <a href="confirm.html" class="btn btn-success text-white mt-3 align-items-center">Confirm Booking</a>
+            </div>  
+          </div>
+        
+          <div class="col-md-6 mb-2">
+              <div class="card border border-warning-subtle p-2 ">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h3 class="text-black text-start">Some Information</h3>
+                  </div>
+                  <div class="col-md-12 d-flex align-items-center mt-2">
+                    <i class="fa-solid fa-map"></i>
+                    <p class="mb-0"><span class="text-dark fs-5">Country:</span> Bali, Indonesia</p>
+                  </div>
+                  <div class="col-md-12 d-flex align-items-center mt-2">
+                    <i class="fa-solid fa-book-open-reader"></i>
+                    <p class="mb-0"><span class="text-dark fs-5">Language Spoken:</span> English</p>
+                  </div>
+                  <div class="col-md-12 d-flex align-items-center mt-2">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <p class="mb-0"><span class="text-dark fs-5">Visa Requirements:</span> Yes</p>
+                  </div>
+                  <div class="col-md-12 d-flex align-items-center mt-2">
+                     <i class="fas fa-chart-area"></i>
+                     <p class="mb-0"><span class="text-dark fs-5">Area (km):</span> 8,452 km</p>
+                  </div>
+                  <div class="col-md-12 d-flex align-items-center mt-2">
+                    <i class="fa-solid fa-person me-2"></i>
+                    <p class="mb-0"><span class="text-dark fs-5">Per Person:</span> $1200</p>
+                  </div>
+                  <div class="col-md-12 d-flex align-items-center mt-2">
+                    <i class="fas fa-chart-area"></i>
+                    <p class="mb-0"><span class="text-dark fs-5">Guide:</span> Local Guide Available</p>
+                  </div>
+                </div>
+              </div>
+          </div>  
+       </div>
+     </div>
+     <div class="container-fluid  text-md-start bg-dark text-warning pt-5 pb-4 mt-3 text-center">
+        <div class="row">
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+             <h4 class="text-uppercase fw-bold mb-3">
+               <i class="fa-brands fa-avianex"></i> Travel World
+             </h4>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-3">Quick Links</h6>
+            <p>
+              <a href="index.html" class="text-warning text-decoration-none">Home</a><br/>
+              <a href="destination.html" class="text-warning text-decoration-none">Destination</a><br/>
+              <a href="package.html" class="text-warning text-decoration-none">Packages</a><br/>
+              <a href="about.html" class="text-warning text-decoration-none">About Us</a><br/>
+              <a href="gallery.html" class="text-warning text-decoration-none">Gallery</a><br/>
+              <a href="services.html" class="text-warning text-decoration-none">Services</a><br/>
+              <a href="#" class="text-warning text-decoration-none">Book</a><br/>
+              <a href="login.html" class="text-warning text-decoration-none">Login</a>
+            </p>
+          </div>
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-3">Services</h6>
+            <p>
+              <a href="services.html" class="text-warning text-decoration-none">
+                <i class="fas fa-hotel me-2"></i>Hotel
+              </a>
+            </p>
+            <p>
+              <a href="services.html" class="text-warning text-decoration-none">
+                <i class="fas fa-utensils me-2"></i>Food & Drink
+              </a>
+            </p>
+            <p>
+              <a href="services.html" class="text-warning text-decoration-none">
+                <i class="fas fa-umbrella-beach me-2"></i>Beach Tour
+              </a>
+            </p>
+            <p>
+              <a href="services.html" class="text-warning text-decoration-none">
+                <i class="fas fa-user-shield me-2"></i>Safety Guide
+              </a>
+            </p>
+            <p>
+              <a href="services.html" class="text-warning text-decoration-none">
+                <i class="fas fa-hiking me-2"></i>Adventures
+              </a>
+            </p>
+            <p>
+               <a href="services.html" class="text-warning text-decoration-none">
+                 <i class="fas fa-plane-departure me-2"></i>Fastest Travel
+               </a>
+            </p>
+          </div>
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-3">Contact</h6>
+            <p><i class="fas fa-home me-2"></i> Rajasthan, India</p>
+            <p><i class="fas fa-envelope me-2"></i> mudgaltanya5@gmail.com</p>
+            <p><i class="fas fa-phone me-2"></i> +91 8955173579</p>
+
+            <div class="mt-3">
+              <a href="#" class="text-warning me-3"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="text-warning me-3"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="text-warning me-3"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-warning"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4 border-top pt-3">
+          <p class="text-muted small mb-0">
+            &copy; 2026 Travel World. All Rights Reserved.
+          </p>
+        </div>
+     </div>
+  </body>
+</html>
